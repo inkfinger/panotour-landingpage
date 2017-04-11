@@ -21,6 +21,14 @@
   top: 120px;
 }
 
+html, body {
+  height: 100%;
+}
+
+.content-box {
+  height: 100%;
+}
+
 @media screen and (max-width: 767px) {
   .sidenav {
     top: 85px;
