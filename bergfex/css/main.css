@@ -1,0 +1,117 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  line-height: 1.5;
+  text-size-adjust: 100%;
+}
+
+* {
+  outline: 0 !important;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+body .opener-overlay {
+  position: relative;
+  display: inline-block;
+  transition: .25s ease-in-out;
+  box-sizing: border-box;
+}
+
+body .opener-overlay.hover {
+  background-color: #0070b8
+}
+
+body .opener-overlay .opener-icon {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .25s ease-in-out;
+  box-sizing: border-box;
+  background-image: url("../images/360-overlay.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body .opener-overlay .opener-icon.show {
+  display: inline;
+  opacity: 1;
+}
+
+body .opener-overlay img {
+  opacity: 1;
+  transition: .25s ease-in-out;
+  box-sizing: border-box;
+}
+
+body .opener-overlay img.disable {
+  opacity: 0.3;
+}
+
+body .lightbox {
+  opacity: 0;
+  pointer-events: none;
+  transition: .25s ease-in-out;
+  box-sizing: border-box;
+}
+
+body .lightbox.active {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+body .lightbox .inner {
+  position: fixed;
+  margin: auto auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body .lightbox .inner .closeme {
+  background-color: #fff;
+  color: #0070b8;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 39px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+body iframe {
+  border: 0;
+  height: 100vh
+  width: 100vw;
+}
+
+#gooPano {
+  height: 100vh;
+  width: 100vw;
+}

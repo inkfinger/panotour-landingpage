@@ -29,6 +29,10 @@ html, body {
   height: 100%;
 }
 
+.ui-button {
+  top: 90px;
+}
+
 @media screen and (max-width: 767px) {
   .sidenav {
     top: 85px;

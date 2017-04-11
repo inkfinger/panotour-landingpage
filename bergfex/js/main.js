@@ -38,7 +38,16 @@ $(document).ready( function () {
 		ga('send', 'event', 'AreaNavigation: ' + hotelName, area , url, {
 			'hotel': hotelName
 		,	'area' : area
-		} )
+		});
+	});
+
+	$('#bookNow').click( function () {
+		ga('send', 'event', 'Book Now', {
+			eventCategory: 'Externer Link zu Buchungsseite',
+	    eventAction: 'click',
+	    eventLabel: event.target.href,
+	    transport: 'beacon'
+		});
 	});
 
 	function initializeGMBV() {

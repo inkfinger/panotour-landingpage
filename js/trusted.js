@@ -83,6 +83,15 @@
 			});
 		});
 
+		$('#bookNow').click( function () {
+			ga('send', 'event', 'Book Now (Quelle: Landing Page)', {
+				eventCategory: 'Externer Link zu Buchungsseite',
+		    eventAction: 'click',
+		    eventLabel: event.target.href,
+		    transport: 'beacon'
+			});
+		});
+
 		window.movePano = function(panoID,head,pitch) {
 			pano.setPov({
 				heading: head,

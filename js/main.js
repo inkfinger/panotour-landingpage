@@ -1,7 +1,6 @@
 (function() {
 
   $('a[href*=#]:not([href=#])').click(function() {
-    console.log('////////////////////////\nclick captured.\n////////////////////////');
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
       var target = $(this.hash);

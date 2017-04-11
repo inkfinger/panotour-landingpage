@@ -1,29 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Unser Angebot für Hotels | nexpics GmbH</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Unser Angebot für Hotels | nexpics GmbH</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/png" href="/favicon.png" />
 
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<!-- Compiled and minified CSS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
 
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-		<link rel="stylesheet" href="tour/css/hotels.css">
-		<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+	<link rel="stylesheet" href="tour/css/hotels.css">
+	<link rel="stylesheet" href="css/main.css">
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-92533126-8', 'auto');
-		  ga('send', 'pageview');
+	  ga('create', 'UA-92533126-8', 'auto');
+	  ga('send', 'pageview');
 
-		</script>
+	</script>
 </head>
 <body>
 
@@ -45,6 +45,9 @@
 
 	<div class="content-box">
 		<div id="tourBranding" class="tour-branding hidesidenav">
+			<span id="fullscreenEnter" onclick="window.open('bergfex/hotels/lp-hotels-romantikhotel-seevilla.html?fullscreen=true',
+  '_blank');" class="ui-button ui-maximize mdi-navigation-fullscreen" aria-hidden="true"></span>
+			<span id="fullscreenExit" onclick="window.close();" class="ui-button ui-minimize mdi-navigation-fullscreen-exit" aria-hidden="true"></span>
 			<div class="hotelLogo">
 	      <a href="http://www.bergfex.at/schmittenhoehe-zellamsee/romantik-hotel-zell-am-see/"><img src="tour/images/logo.png"></a>
       </div>
@@ -486,7 +489,10 @@
 		}
 		// Now you can get any param by 'params.param':
 		if ( params.fullscreen === "true" ) {
-			document.documentElement.className = "fullscreen";
+			document.documentElement.className = "fullscreen-mode";
+		};
+		if ( params.embed === "true" ) {
+			document.documentElement.className = "embed-mode";
 		};
 		if ( params.chromeless === "true" ) {
 			document.getElementById("mySidenav").style.display = "none";
