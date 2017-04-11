@@ -1,0 +1,497 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Unser Angebot für Hotels | nexpics GmbH</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Compiled and minified CSS -->
+
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+		<link rel="stylesheet" href="tour/css/hotels.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-92533126-8', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+</head>
+<body>
+
+	<!-- Navigation bar -->
+	<header id="nav">
+		<nav>
+			<div class="nav-wrapper container">
+				<a href="#!" class="brand-logo">
+					<img src="img/nexpics-logo.svg" alt="">
+				</a>
+
+				<!-- DESKTOP MENU-->
+				<ul class="right hide-on-med-and-down table-of-contents">
+					<a href="/#TerminVereinbaren"><li><div>Termin vereinbaren</div></li></a>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="content-box">
+		<div id="tourBranding" class="tour-branding hidesidenav">
+			<div class="hotelLogo">
+	      <a href="http://www.bergfex.at/schmittenhoehe-zellamsee/romantik-hotel-zell-am-see/"><img src="tour/images/logo.png"></a>
+      </div>
+
+	    <div id="mySidenav" class="sidenav">
+	      <div class="nav-btn nav-close">
+	        <a href="javascript:void(0)" onclick="closeNav()">
+	          <span class="mdi-navigation-close" aria-hidden="true"></span>
+	        </a>
+	      </div>
+	      <div class="nav-btn nav-open">
+	        <a href="javascript:void(0)" onclick="openNav()">
+	          <span class="mdi-navigation-chevron-right" aria-hidden="true"></span>
+	        </a>
+	      </div>
+	      <div id="areaNav">
+					<a href="http://www.seevilla.at/" class="directLink" target="_blank">Zur Hotel Homepage</a>
+					<div class="area-scroll">
+		        <div class="areaChild app-location-area-nav-link active" panoID="08REEdwNz3IAAAQvO6TTMA" coord="83.94,2.829" areaName="Rezeption">Rezeption</div>
+		        <div class="areaChild app-location-area-nav-link" panoID="hmkIXHyJJawAAAQvO5qrgQ" coord="155.8500082821139,-4.173806913869239" areaName="Beauty Zimmer">Beauty Zimmer</div>
+		        <div class="areaChild app-location-area-nav-link" panoID="0a4A_lyDbt4AAAQvO6NuZA" coord="-90.18308655710887,-16.944825591931114" areaName="Brahms Salon">Brahms Salon</div>
+		        <div class="areaChild app-location-area-nav-link" panoID="I0bTUacXS6wAAAQvO6Hckw" coord="-199.22921517743896,-11.266160376664217" areaName="Restaurant">Restaurant</div>
+		        <div class="areaChild app-location-area-nav-link" panoID="GmOL7-dmqGYAAAQvO5qrhA" coord="-123.00756852804409,-5.947145667442359" areaName="Saunabereich">Saunabereich</div>
+		        <div class="areaChild app-location-area-nav-link" panoID="YEk8RYxVHR8AAAQvO6Hc1g" coord="91.82378644309571,-5.174963712795216" areaName="Hallenbad">Hallenbad</div>
+		        <div class="areaChild app-location-area-nav-link" panoID="vllF5vZ_fTQAAAQvO6TTMg" coord="37.273895762471724,-12.789479397507137" areaName="Tagungsraum">Tagungsraum</div>
+		        <div class="areaChild app-location-area-nav-link" panoID="bsCaN340RDQAAAQvO6Rm5g" coord="118.72868531965322,-2.05452627487038" areaName="Terrasse">Terrasse</div>
+		        <div class="areaChild app-location-area-nav-link" panoID="aNtEUOFSvBAAAAQvO6BHtw" coord="-46.82581756232421,-13.282912527728255" areaName="Bergblick Superior">Bergblick Superior</div>
+		        <div class="areaChild app-location-area-nav-link" panoID="lIh-ZLnO71YAAAQvO6K2Xg" coord="57.681955933211874,-10.721617566213496" areaName="Seeblick Superior">Seeblick Superior</div>
+		        <div class="areaChild app-location-area-nav-link" panoID="W69FNR3hpTAAAAQvO541Ug" coord="61.62123007052152,-9.707381607343239" areaName="Brahms Suite">Brahms Suite</div>
+					</div>
+	      </div>
+	    </div>
+		</div>
+
+		<div class="action-buttons">
+			<a href="https://www.seevilla.at/online-buchen.html" target="_blank" class="action-button main-button" id="actionBookNow">
+				<span>Jetzt buchen</span>
+			</a>
+			<a href="#" class="action-button" id="actionEmail">
+				<span class="mdi-communication-email" aria-hidden="true"></span>
+			</a>
+			<a href="#" class="action-button" id="actionCall">
+				<span class="mdi-communication-phone" aria-hidden="true"></span>
+			</a>
+			<a href="#" class="action-button" id="actionShare">
+				<span class="mdi-social-share" aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div class="img-background" id="GoogleTrustedPanorama"></div>
+
+		<div class="img-window" id="imgWindow">
+			<img src="img/360icon.png" class="icon360" alt="360 Tour"><br>
+
+			CLICK TO ENTER
+		</div>
+		<div id="closeTour">
+			<i class="material-icons">close</i>
+		</div>
+
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m8 offset-m4">
+						<img src="img/google-logo.svg" class="google-logo" alt="Google Logo"><br>
+						<h1 style="float:left;">
+							<span class="hide">Google</span>
+							<!-- <span style="font-weight:300;">Deine</span><br> -->
+							<!-- <span class="google" style="color:rgb( 66, 133, 244);">G</span><span class="google" style="color:rgb( 234, 67,  53);">o</span><span class="google" style="color:rgb(251, 188,   5);">o</span><span class="google" style="color:rgb( 66, 133, 244);">g</span><span class="google" style="color:rgb( 52, 168,  83);">l</span><span class="google" style="color:rgb(234,  67,  53);">e</span><br> -->
+							Street View | Trusted<br><span class="bigFont">für Ihr Hotel</span>
+							<!-- <span style="display:block;float:right;font-weight:300;">Tour</span> -->
+						</h1>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col s12 m4">
+						<span class="bigFont">
+							Ein be&shy;ein&shy;dru&shy;cken&shy;des vir&shy;tu&shy;el&shy;les Er&shy;leb&shy;nis für ihre Kun&shy;den!
+						</span>
+					</div>
+					<div class="col s12 m8">
+
+						<div style="clear:both;"></div>
+						<p>
+							Die Entscheidung ein Geschäft persönlich aufzusuchen, wird immer öfter am Computer oder Smartphone getroffen. Die Google Street View | Trusted virtuelle Tour ermöglicht potenziellen Kunden bereits vor dem persönlichen Besuch bei Ihnen einen realitätsnahen Einblick in Ihre Filiale und Ihr Angebot zu geben und <b>Vertrauen aufzubauen</b>. Mit diesen beeindruckenden virtuellen Erlebnissen können Sie potenzielle Gäste und Kunden für sich gewinnen.
+						</p>
+
+						<p>
+							Virtuelle Touren <b>verdoppeln das Interesse</b> an Brancheneinträgen! Google Statistiken belegen: Bei Nutzern, die sich eine virtuelle Tour angesehen haben, ist die Wahrscheinlichkeit doppelt so hoch, dass sie anschließend ein Unternehmen aufsuchen und kaufen. In der Altersgruppe von 18 bis 34 Jahren ist dies sogar um 130% wahrscheinlicher. 67% der Befragten wünschen sich sogar mehr Brancheneinträge mit virtuellen Touren.
+						</p>
+
+						<p>
+							Wir kümmern uns um alles! Noch heute können Sie mit unseren Beratern Ihren Wunschtermin vereinbaren und einer unserer Fotografen wird an Ihrem Wunschtermin die 360° Aufnahmen ihres Unternehmens aufnehmen. Sobald wir Ihre Bilder bearbeitet und zusammengesetzt haben, ist Ihre Google Street View | Trusted Tour bereits kurz darauf in Google Diensten wie “<b>Google Suche</b>”, “<b>Google Maps</b>” oder auch auf <b>Ihrer Webseite</b> zu finden!
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contact" id="Browser">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m6 l6 offset-m3 offset-l3">
+						<span class="bigFont centered">Browserdarstellung</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m12 l10 offset-l1">
+						<img src="img/browser-titanic-hotel.png" />
+					</div>
+				</div>
+				<div class="row topandbottom">
+					<div class="col s12 m4 l4 offset-m4 offset-l4">
+				  	<a class="waves-effect waves-light btn red" target="blank" href="https://www.google.de/search?q=titanic+gendarmenmarkt&oq=titanic+gen&aqs=chrome.0.0j69i61j69i57j0l3.2878j0j7&sourceid=chrome&ie=UTF-8" style="display:block">Beispiel öffnen</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m4 l4">
+						WARUM?<br>
+						Die Entscheidung für das richtige Hotel fällt oft schwer. Deshalb ist es umso wichtiger, die räumliche Darstellung zu verbessern und dem User eine bessere Experience zu ermöglichen. Mit Hilfe einer hochwertigen virtuellen Tour geben Sie Nutzern schon vor der Ankunft bei Ihnen einen realitätsnahen Einblick in Ihr Unternehmen und bauen Vertrauen auf. So können Sie potenzielle Gäste und Kunden leichter gewinnen und an sich binden.
+					</div>
+					<div class="col s12 m4 l4">
+						WAS GENAU? <br>
+						Wecken Sie mit einer StreetView Innenansicht Ihrer Geschäftsräume in der Google Suche und auf Google Maps das Interesse potentieller Kunden.
+					</div>
+					<div class="col s12 m4 l4">
+						WAS BRINGT DAS?
+						<br>
+						-	Nutzung Google Maps: Bei 44% aller Suchen nach einem bestimmten Unternehmen kommen Karten (Google Maps) zum Einsatz. Quelle: Google 2015<br>
+						- Vor Ort Besuche: Bis zu 20 % mehr Reservierungen bei Restaurants mit Google Street View | Trusted Tour. Quelle: NYC & Company – Case Study 2015<br>
+						- Nutzerinteresse: Einträge mit einer virtuellen Tour stoßen mit doppelt so hoher Wahrscheinlichkeit auf Interesse.<br>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="content notop">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m6 l6 offset-m3 offset-l3">
+						<span class="bigFont centered">Websiteintegration</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m12 l10 offset-l1">
+						<img src="img/integration-imac-ipad-motel-one.png" />
+					</div>
+				</div>
+				<div class="row topandbottom">
+					<div class="col s12 m4 l4 offset-m4 offset-l4">
+				  	<a class="waves-effect waves-light btn red" target="blank" href="https://www.motel-one.com/de/hotels/muenchen/hotel-muenchen-city-sued/#t=360" style="display:block">Beispiel öffnen</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m4 l4">
+						WARUM?<br>
+						Hochwertige Touren halten die Besucher Ihrer Webseite auf der Seite und binden pozentielle Gäste bereits frühzeitig an Ihr Hotel, da er durch die Bilder einen Eindruck bekommt, wie Ihre Räumlichkeiten von Innen aussehen.
+					</div>
+					<div class="col s12 m4 l4">
+						WAS GENAU?<br>
+						Binden Sie das beeindruckende 360 Grad Panorama auf Ihrer Webseite ein.
+					</div>
+					<div class="col s12 m4 l4">
+						WAS BRINGT DAS?<br>
+						Deutliche Aufwertung der Webseite durch reale Bilder aus der wirklichen Welt. Es bietet somit eine wichtige Zusatzinformation und bereichert die Webseite mit hochwertigem Content.
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="contact" id="Browser">
+			<div class="container">
+				<div class="row">
+				<div class="col s12 m6 l6 offset-m3 offset-l3">
+					<span class="bigFont centered">Facebook 360°</span>
+				</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m10 l8 offset-m1 offset-l2">
+						<img src="img/facebook.png" />
+					</div>
+				</div>
+				<div class="row topandbottom">
+					<div class="col s12 m4 l4 offset-m4 offset-l4">
+				  	<a class="waves-effect waves-light btn red" target="blank" href="https://www.facebook.com/Berlinproof/photos/a.1471077646438421.1073741828.1398709687008551/1769844613228388/?type=3&theater" style="display:block" target="blank">Beispiel anzeigen</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m4 l4">
+						LIKEN <br>
+						Posten Sie Ihre Google Tour jetzt auch auf Facebook, Ihre Fans werden sich mit vielen „Likes“ bedanken. Jeder „Like“ teilt den Beitrag auf den Chroniken der Freunde, steigert die Sichtbarkeit und bewirbt Ihr Hotel.
+					</div>
+					<div class="col s12 m4 l4">
+						SHARE <br>
+						Nutzen Sie die Vorteile von Facebook und veröffentlichen Sie einen interessanten 360° Beitrag, Ihre Follower werden erstaunt sein und den Beitrag teilen. Geteilte Inhalte wecken Vertrauen und verhelfen Ihnen zu potenziellen Gästen.
+					</div>
+					<div class="col s12 m4 l4">
+						PROMOTE <br>
+						Bewerben Sie ihr beeindruckendes 360° Panorama bei Facebook und gewinnen Sie viele neue Gäste. Schon mit dem kleinsten Werbebudget haben Sie eine unglaubliche Reichweite.
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="contact" id="TerminVereinbaren">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m8">
+						<h4>Individueller Beratungstermin</h5>
+						<form action="php/contact.php" method="post" id="terminForm">
+							<hr>
+							<span id="requiredFields">FÜLLEN SIE ALLE FELDER MIT EINEM STERN AUS</span>
+							<div class="row">
+								<div class="col s12 m6">
+									<input type="text" placeholder="Hotel Name *" name="studio Name" required>
+								</div>
+								<div class="col s12 m6">
+									<input type="text" placeholder="Land *" name="land" required>
+								</div>
+
+								<div class="col s12 m6">
+									<input type="text" placeholder="Vorname *" name="vorname" required>
+								</div>
+								<div class="col s12 m6">
+									<input type="text" placeholder="Nachname *" name="nachname" required>
+								</div>
+
+								<div class="col s12 m6">
+									<input type="text" placeholder="Straße *" name="strasse" required>
+								</div>
+								<div class="col s12 m6">
+									<input type="text" placeholder="PLZ/Ort *" name="plzort" required>
+								</div>
+
+							</div>
+
+							<hr>
+
+							<div class="row">
+								<div class="col s12 m6">
+									<input type="text" placeholder="Telefon *" name="tel" required>
+								</div>
+								<div class="col s12 m6">
+									<input type="text" placeholder="Fax" name="fax">
+								</div>
+
+								<div class="col s12 m6">
+									<input type="text" placeholder="Mail *" name="email" required>
+								</div>
+								<div class="col s12 m6">
+									<input type="text" placeholder="Web" name="web">
+								</div>
+							</div>
+
+							<hr>
+							<input type="radio" name="cols" class="col-1" /><br />
+							<input type="radio" name="cols" class="col-2" /><br />
+							<input type="radio" name="cols" class="col-3" />
+							<div class="row">
+								<div class="col s12 m6">
+									ICH MÖCHTE:
+									<span id="chooseOne"><br>WÄHLEN SIE MINDESTENS EINE OPTION</span>
+								</div>
+								<div class="col s12 m6">
+      						<input type="checkbox" name="wunschtermin" class="filled-in" id="wunschtermin"/>
+      						<label for="wunschtermin">MEINEN WUNSCHTERMIN ANFRAGEN</label>
+
+      						<input type="checkbox" name="angebot" class="filled-in" id="angebot" />
+      						<label for="angebot">EIN SCHRIFTLICHES ANGEBOT ERHALTEN</label> <br>
+
+      						<input type="checkbox" name="bestellen" class="filled-in" id="bestellen" />
+      						<!-- <label for="bestellen">BESTELLEN</label> <br> -->
+								</div>
+							</div>
+							<div class="row" id="rueckrufMore" style="display: none;">
+								<div class="col s12">
+									<hr>
+									RÜCKRUF
+									<span id="chooseRueckruf"><br>FÜLLEN SIE ALLE FELDER AUS</span>
+								</div>
+								<div class="col s12 m2 l1" style="line-height: 10px;padding-top: 19px;">AM:</div>
+								<div class="col s12 m5 l6"><input type="date" placeholder="Wähle ein Datum" name="rueckDate" class="datepicker" id="rueckDate"></div>
+								<div class="col s12 m5 l5">
+									<select name="rueckZeit" id="rueckTageszeit">
+										<option disabled selected>Tageszeit</option>
+										<option value="Vormittag">10:00&nbsp;&ndash;&nbsp;12:00 | Vormittags</option>
+										<option value="Mittag">12:00&nbsp;&ndash;&nbsp;14:00 | Mittags</option>
+										<option value="Nachmittag">14:00&nbsp;&ndash;&nbsp;16:00 | Nachmittags</option>
+										<option value="Abend">16:00&nbsp;&ndash;&nbsp;18:00 | Abends</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row" id="wunschterminMore" style="display: none;">
+								<div class="col s12">
+									<hr>
+									WUNSCHTERMIN
+									<span id="chooseTermin"><br>FÜLLEN SIE ALLE FELDER AUS</span>
+								</div>
+								<div class="col s12 m2 l1" style="line-height: 10px;padding-top: 19px;">AM:</div>
+								<div class="col s12 m5 l6"><input type="date" placeholder="Wähle ein Datum" class="datepicker" id="terminDate" name="terminDate"></div>
+								<div class="col s12 m5 l5">
+									<select name="terminZeit" id="terminTageszeit">
+										<option disabled selected>Tageszeit</option>
+										<option value="Vormittag">10:00&nbsp;&ndash;&nbsp;12:00 | Vormittags</option>
+										<option value="Mittag">12:00&nbsp;&ndash;&nbsp;14:00 | Mittags</option>
+										<option value="Nachmittag">14:00&nbsp;&ndash;&nbsp;16:00 | Nachmittags</option>
+										<option value="Abend">16:00&nbsp;&ndash;&nbsp;18:00 | Abends</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="progress">
+						      <div class="indeterminate"></div>
+						  </div>
+
+						  <span class="sendingLabel">Email wird versendet ...</span>
+						  <span class="sendLabel">Email wurde versand!</span>
+
+							<input type="submit" class="btn-flat right" value="ABSCHICKEN">
+
+						</form>
+					</div>
+					<div class="col s12 m4">
+						<h5>Let's talk</h5>
+						<p>
+							Tragen Sie Ihre Kontaktmöglichkeiten und Ihren Wunschtermin in das nebenstehende Formular ein und erhalten Sie zum gewünschten Termin ein telefonisches Beratungsgespräch.
+						</p>
+
+
+						<p>
+							Gerne können Sie uns auch persönlich kontaktieren. Unsere Berater helfen Ihnen gerne.<br>
+							<a class="btn-flat telBtn" href="tel:03077008650"><i class="material-icons left">phone</i>030 / 77 00 86 50</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="gsep">
+		<div class="blue"></div>
+		<div class="red"></div>
+		<div class="yellow"></div>
+		<div class="green"></div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="row links">
+				<div class="col s12 m4">
+					<h5>nexpics GmbH</h5>
+					<ul>
+						<li><a target="_blank" href="//www.nexpics.com/">Home</a></li>
+						<li><a target="_blank" href="//www.berlinproof.com/google-business-views">Google Street View | Trusted</a></li>
+						<li><a target="_blank" href="//nexpics.com/#contact">Kontakt</a></li>
+					</ul>
+				</div>
+				<div class="col s12 m4">
+					<h5>Google Street View | Trusted</h5>
+					<ul>
+						<li><a target="_blank" href="//www.google.de/intl/de/maps/streetview/explore/">Erkunden</a></li>
+						<li><a target="_blank" href="//www.google.de/intl/de/maps/streetview/understand/">Hintergründe</a></li>
+						<li><a target="_blank" href="//www.google.de/intl/de/maps/streetview/">Galerie</a></li>
+						<li><a target="_blank" href="//www.google.com/maps/@52.5111299,13.4059908,3a,75y,140.49h,80.16t/data=!3m6!1e1!3m4!1sgme_W_hShucAAAQqqTTXuw!2e0!7i13312!8i6656">nexpics | Google Maps</a></li>
+						<li><a target="_blank" href="//www.google.de/search?q=nexpics">nexpics | Google Suche</a></li>
+					</ul>
+				</div>
+				<div class="col s12 m4">
+					<h5>Kontakt</h5>
+					<ul>
+						<li>Wallstraße 15</li>
+						<li>10179 Berlin</li>
+						<li>T. <span class="hover">030 / 77 00 86 50</span></li>
+						<li>E. <a target="_blank" href="mailto:info@nexpics.com">info@nexpics.com</a></li>
+						<li><a target="_blank" href="//nexpics.com/imprint">Impressum</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="row copyright">Copyright by <a href="//www.nexpics.com">nexpics GmbH</a></div>
+	</footer>
+
+	<!-- Scripts -->
+	<!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="library/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlWwvInSADYpgtAnngYEXrbHZCsaTRF5I"></script>
+	<script type="text/javascript" src="js/custom.modernizr.min.js"></script>
+	<script type="text/javascript" src="js/trusted.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	<script>
+		$('.newcol').click(function () {
+	    $('#' + $(this).attr('partner')).attr('checked',true)
+			$('.newcol.active').removeClass('active')
+	    $(this).addClass('active')
+		});
+		$( document ).ready(function() {
+			$('.modal').modal({
+	      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+	      opacity: .5, // Opacity of modal background
+	      in_duration: 300, // Transition in duration
+	      out_duration: 200, // Transition out duration
+	      starting_top: '4%', // Starting top style attribute
+	      ending_top: '10%', // Ending top style attribute
+	      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+
+	        console.log(modal, trigger);
+	      },
+	      complete: function() {} // Callback for Modal close
+	    });
+		});
+	</script>
+	<script>
+	/* Set the width of the side navigation to 250px */
+		function openNav() {
+			document.getElementById("mySidenav").className = "sidenav shown";
+		}
+
+		/* Set the width of the side navigation to 0 */
+		function closeNav() {
+			document.getElementById("mySidenav").className = "sidenav hidden";
+		}
+	</script>
+
+	<script>
+		var params = {};
+		if (location.search) {
+			var parts = location.search.substring(1).split('&');
+			for (var i = 0; i < parts.length; i++) {
+				var nv = parts[i].split("=");
+				if (!nv[0]) continue;
+				params[nv[0]] = nv[1] || true;
+			}
+		}
+		// Now you can get any param by 'params.param':
+		if ( params.fullscreen === "true" ) {
+			document.documentElement.className = "fullscreen";
+		};
+		if ( params.chromeless === "true" ) {
+			document.getElementById("mySidenav").style.display = "none";
+			document.getElementById("tourBranding").style.display = "none";
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+.saturn {
+  color:#f28609 !important;
+}
+.contact .telBtn {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid #333333;
+  color: #333333;
+  -ms-transition: color 250ms ease, background-color 250ms ease;
+  -o-transition: color 250ms ease, background-color 250ms ease;
+  -webkit-transition: color 250ms ease, background-color 250ms ease;
+  -moz-transition: color 250ms ease, background-color 250ms ease;
+  transition: color 250ms ease, background-color 250ms ease;
+}
+.contact .telBtn:hover {
+  color: #FFF;
+  background-color: #333333;
+}
+.contact .telBtn i {
+  font-size: 1.7rem;
+}
+footer {
+  color: #b4b4b4;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background-color: #333333;
+  padding: 0;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+}
+footer .row {
+  margin-bottom: 0;
+}
+footer .hover,
+footer a {
+  color: inherit;
+}
+footer .hover:hover,
+footer a:hover {
+  color: #FFF;
+}
+footer h5 {
+  color: #FFF;
+  font-weight: bold;
+}
+footer .links {
+  padding: 50px 0 20px 0;
+}
+footer .copyright {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 10px 15px 10px;
+  background-color: #262626;
+  color: #787878;
+  margin-bottom: 0;
+}
+footer .copyright a {
+  color: inherit;
+}
+footer .copyright a:hover {
+  color: #FFF;
+}
+
+.dist-top {
+  margin-top:50px;
+}
+.dist-bot {
+  margin-bottom:50px;
+}
+
+.lightbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 999;
+  background-color: rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.lightbox .inner {
+  cursor: default;
+  position:fixed;
+  top: 50%;
+  left: 34%;
+  margin-top: -375px; /*set to a negative number 1/2 of your height*/
+  margin-left: -270px; /*set to a negative number 1/2 of your width*/
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+
+  background-color: rgba(255,255,255,0.6);
+  padding: 30px 20px;
+  
+  width:960px;
+  height:750px;
+}
+
+.lightbox .inner iframe {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
