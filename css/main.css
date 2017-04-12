@@ -18,6 +18,7 @@
 }
 
 .sidenav {
+  position: absolute;
   top: 120px;
 }
 
