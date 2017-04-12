@@ -41,10 +41,37 @@ $(document).ready( function () {
 		});
 	});
 
-	$('#bookNow').click( function () {
+	$('#actionBookNow').click( function () {
 		ga('send', 'event', 'Book Now', {
-			eventCategory: 'Externer Link zu Buchungsseite',
-	    eventAction: 'click',
+			eventCategory: 'External link: Booking page',
+			eventAction: 'Button click: #actionBookNow',
+	    eventLabel: event.target.href,
+	    transport: 'beacon'
+		});
+	});
+
+	$('#fullscreenEnter').click( function () {
+		ga('send', 'event', 'Enter fullscreen mode', {
+			eventCategory: 'Engagement: Enter fullscreen',
+			eventAction: 'Button click: #fullscreenEnter',
+	    eventLabel: event.target.href,
+	    transport: 'beacon'
+		});
+	});
+
+	$('#fullscreenExit').click( function () {
+		ga('send', 'event', 'Exit fullscreen mode', {
+			eventCategory: 'Engagement: Return to last page',
+			eventAction: 'Button click: #fullscreenExit',
+	    eventLabel: event.target.href,
+	    transport: 'beacon'
+		});
+	});
+
+	$('#brandingLogo').click( function () {
+		ga('send', 'event', 'Visit Brand', {
+			eventCategory: 'Engagement: Visit directory page',
+			eventAction: 'Image click: #brandingLogo',
 	    eventLabel: event.target.href,
 	    transport: 'beacon'
 		});
