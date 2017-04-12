@@ -1,11 +1,12 @@
 /* ///////////////////////////////////// */
-/* FULLSCREEN MODE*/
+/* FULLSCREEN MODE (html.fullscreen-mode) */
 
 .fullscreen-mode .hotelLogo {
   display: block;
 }
 
-.fullscreen-mode .ui-maximize {
+.fullscreen-mode .ui-maximize,
+.showcase-mode .ui-maximize {
   display: none;
 }
 
@@ -14,17 +15,20 @@
 }
 
 /* ///////////////////////////////////// */
-/* EMBED MODE*/
+/* EMBED MODE (html || html.embed-mode) is !DEFAULT */
 
-.embed-mode .hotelLogo {
+.embed-mode .hotelLogo,
+.hotelLogo {
   display: none;
 }
 
-.embed-mode .ui-maximize {
+.embed-mode .ui-maximize,
+.ui-maximize {
   display: block;
 }
 
-.embed-mode .ui-minimize {
+.embed-mode .ui-minimize,
+.ui-minimize {
   display: none;
 }
 
@@ -36,7 +40,7 @@
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
-  display: none;
+  /*display: none;*/
   font-size: 3rem;
   height: 3rem;
   padding: 2rem;

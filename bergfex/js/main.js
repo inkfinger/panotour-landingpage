@@ -15,8 +15,13 @@ $(document).ready( function () {
 	$(document).attr('title', [defaultTitel, $('#areaNav .areaChild[panoid="' + initialPano[0] + '"]').addClass('active').attr('areaName')].join(' - ') )
 
 	$('.directLink').click(function(){
-		ga('send', 'event', 'Visit Homepage')
-	})
+		ga('send', 'event', 'Visit Homepage', {
+			eventCategory: 'Engagement: Visit Homepage',
+			eventAction: 'AreaNavigation: DirectLink',
+			eventLabel: event.target.href,
+			transport: 'beacon'
+		});
+	});
 
 	$('#areaNav .areaChild').click( function () {
 

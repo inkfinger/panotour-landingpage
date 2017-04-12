@@ -49,7 +49,7 @@
   '_blank');" class="ui-button ui-maximize mdi-navigation-fullscreen" aria-hidden="true"></span>
 			<span id="fullscreenExit" onclick="window.close();" class="ui-button ui-minimize mdi-navigation-fullscreen-exit" aria-hidden="true"></span>
 			<div class="hotelLogo">
-	      <a id="brandingLogo" href="http://www.bergfex.at/schmittenhoehe-zellamsee/romantik-hotel-zell-am-see/"><img src="tour/images/logo.png"></a>
+	      <a id="brandingLogo" href="http://www.bergfex.at/sommer/altaussee-loser/romantik-hotel-seevilla/"><img src="tour/images/logo.png"></a>
       </div>
 
 	    <div id="mySidenav" class="sidenav">
@@ -493,6 +493,9 @@
 		};
 		if ( params.embed === "true" ) {
 			document.documentElement.className = "embed-mode";
+		};
+		if ( params.showcase === "true" ) {
+			document.documentElement.className = "showcase-mode";
 		};
 		if ( params.chromeless === "true" ) {
 			document.getElementById("mySidenav").style.display = "none";
