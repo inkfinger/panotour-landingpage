@@ -49,9 +49,10 @@
   '_blank');" class="ui-button ui-maximize mdi-navigation-fullscreen" aria-hidden="true"></span>
 			<span id="fullscreenExit" onclick="window.close();" class="ui-button ui-minimize mdi-navigation-fullscreen-exit" aria-hidden="true"></span>
 			<div class="hotelLogo">
-	      <a id="brandingLogo" href="http://www.bergfex.at/sommer/altaussee-loser/romantik-hotel-seevilla/"><img src="tour/images/logo.png"></a>
+	      <a id="brandingLogo" href="http://www.bergfex.at/sommer/altaussee-loser/romantik-hotel-seevilla/" target="_blank"><img src="tour/images/logo.png"></a>
       </div>
 
+			<a href="http://www.seevilla.at/" class="directLink" target="_blank">Zur Hotel Homepage</a>
 	    <div id="mySidenav" class="sidenav">
 	      <div class="nav-btn nav-close">
 	        <a href="javascript:void(0)" onclick="closeNav()">
@@ -64,7 +65,6 @@
 	        </a>
 	      </div>
 	      <div id="areaNav">
-					<a href="http://www.seevilla.at/" class="directLink" target="_blank">Zur Hotel Homepage</a>
 					<div class="area-scroll">
 		        <div class="areaChild app-location-area-nav-link active" panoID="08REEdwNz3IAAAQvO6TTMA" coord="83.94,2.829" areaName="Rezeption">Rezeption</div>
 		        <div class="areaChild app-location-area-nav-link" panoID="hmkIXHyJJawAAAQvO5qrgQ" coord="155.8500082821139,-4.173806913869239" areaName="Beauty Zimmer">Beauty Zimmer</div>
@@ -494,8 +494,8 @@
 		if ( params.embed === "true" ) {
 			document.documentElement.className = "embed-mode";
 		};
-		if ( params.showcase === "true" ) {
-			document.documentElement.className = "showcase-mode";
+		if ( params.tour === "true" ) {
+			document.documentElement.className = "tour-mode";
 		};
 		if ( params.chromeless === "true" ) {
 			document.getElementById("mySidenav").style.display = "none";

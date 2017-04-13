@@ -6,7 +6,10 @@
 }
 
 .fullscreen-mode .ui-maximize,
-.showcase-mode .ui-maximize {
+.tour-mode .ui-maximize,
+.tour-mode .directLink,
+.tour-mode .action-buttons,
+.tour-mode .sidenav {
   display: none;
 }
 
@@ -175,7 +178,7 @@
   /*overflow-x: hidden;*/
   padding-top: 0px;
   position: fixed;
-  top: 40px;
+  top: 91px;
   -webkit-transition: .5s ease;
   -moz-transition: .5s ease;
   -ms-transition: .5s ease;
@@ -228,7 +231,7 @@
   position: absolute;
   right: 0;
   text-decoration: none;
-  top: 50px;
+  top: 0px;
   width: 35px;
   z-index: 2;
   -webkit-transition: .5s ease;
@@ -263,7 +266,7 @@
   user-select: none;
 }
 
-.sidenav #areaNav .directLink, .sidenav #areaNav .directLink:visited {
+.directLink, .directLink:visited {
   /* color: #fefedc; */
   background-color: #404d61;
   color: #fff;
@@ -273,21 +276,21 @@
   text-transform: uppercase;
 }
 
-.sidenav #areaNav .directLink {
+.directLink {
   -webkit-transition: .5s ease;
   -moz-transition: .5s ease;
   -ms-transition: .5s ease;
   -o-transition: .5s ease;
+  position: absolute;
   transition: .5s ease;
+  top: 41px;
   width: 100%;
+  width: 250px;
+  z-index: 2;
 }
 
-.sidenav.hidden #areaNav .directLink {
-  width: 100%;
-}
-
-.sidenav #areaNav .directLink::before,
-.sidenav #areaNav .directLink::after {
+.directLink::before,
+.directLink::after {
   bottom: 0;
   content: "\e89b";
   display: inline-block;
@@ -303,7 +306,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.sidenav #areaNav .directLink::after {
+.directLink::after {
   right: 1.14rem;
 }
 
@@ -315,13 +318,13 @@
   width: calc(100% - 35px - 1px);
 }
 
-.sidenav #areaNav .areaChild.active {
+.sidenav .areaChild.active {
   background: rgba(255,255,255,0.8);
   color: #333;
   font-weight: 500;
 }
 
-.sidenav #areaNav .areaChild, .sidenav #areaNav .directLink {
+.sidenav .areaChild, .directLink {
   text-overflow: ellipsis;
   white-space: nowrap;
   background-color: rgba(32, 44, 67, 0.75);
@@ -335,12 +338,15 @@
   margin-bottom: 1px;
   overflow: hidden;
   padding: 7px 10px 7px;
-  position: relative;
   text-align: left;
+}
+
+.sidenav .areaChild {
+  position: relative;
   width: 100%;
 }
 
-.sidenav #areaNav .areaChild:hover, .sidenav #areaNav .directLink:hover {
+.sidenav .areaChild:hover, .directLink:hover {
   /*background-color: rgba(32, 44, 67, 1);*/
   background: rgba(255,255,255,0.8);
   color: #333;
@@ -355,15 +361,18 @@
     top: 20px;
   }
 
+  .directLink {
+    top: 21px;
+  }
+
   .sidenav {
-    top: 20px;
+    top: 58px;
     width: 170px;
   }
 
   .sidenav .nav-btn {
     line-height: 24px;
     height: 24px;
-    top: 37px;
     width: 24px;
   }
 
@@ -373,22 +382,24 @@
     width: calc(100% - 25px);
   }
 
-  .sidenav #areaNav .areaChild, .sidenav #areaNav .directLink {
+  .sidenav .areaChild, .directLink {
     font-size: 12px;
     padding: 3px 10px 3px;
+    width: 170px;
   }
 
-  .sidenav #areaNav .directLink::before,
-  .sidenav #areaNav .directLink::after {
+  .directLink::before,
+  .directLink::after {
     line-height: 2.65;
     right: 0.25rem
   }
 
-  .sidenav #areaNav .directLink::after {
+  .directLink::after {
     right: 0.65rem
   }
 
   .action-buttons {
+    bottom: 40px;
     left: 15px;
   }
 
@@ -418,7 +429,7 @@
 
   .sidenav .area-scroll {
     height: auto;
-    max-height: calc(100% - 19rem);
+    max-height: calc(100% - 15rem);
     width: calc(100% - 25px);
   }
 
