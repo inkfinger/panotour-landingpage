@@ -310,12 +310,21 @@
   right: 1.14rem;
 }
 
-.sidenav .area-scroll {
+.sidenav .area-scrollcontainer {
   float: left;
   max-height: calc(100% - 15rem);
   height: calc(100% - 28rem);
-  overflow: auto;
-  width: calc(100% - 35px - 1px);
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 36px);
+}
+
+.sidenav .area-scroll {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: calc(100% + 18px);
 }
 
 .sidenav .areaChild.active {
@@ -376,17 +385,27 @@
     width: 24px;
   }
 
-  .sidenav .area-scroll {
+  .sidenav .area-scrollcontainer {
+    height: calc(100% - 15rem);
     max-height: 60vh;
-    height: auto;
+    /* IE Edge safe! */
     width: calc(100% - 25px);
   }
 
   .sidenav .areaChild, .directLink {
     font-size: 12px;
     padding: 3px 10px 3px;
+  }
+
+  /* IE Edge safe! */
+  .directLink {
     width: 170px;
   }
+  .sidenav .areaChild {
+    width: 152px;
+  }
+  /* »Don't touch anything.« – Indiana Jones */
+
 
   .directLink::before,
   .directLink::after {
@@ -423,24 +442,4 @@
   .fullscreen-mode .hotelLogo img {
     max-width: 100px;
   }
-}
-
-@media screen and (max-width: 767px) and (orientation: landscape) {
-
-  .sidenav .area-scroll {
-    height: auto;
-    max-height: calc(100% - 15rem);
-    width: calc(100% - 25px);
-  }
-
-}
-
-@media screen and (max-width: 767px) and (orientation: portrait) {
-
-  .sidenav .area-scroll {
-    max-height: 60vh;
-    height: auto;
-    width: calc(100% - 25px);
-  }
-
 }
