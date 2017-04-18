@@ -314,7 +314,7 @@
   float: left;
   max-height: calc(100% - 15rem);
   height: calc(100% - 28rem);
-  overflow: scroll;
+  overflow: auto;
   width: calc(100% - 35px - 1px);
 }
 
