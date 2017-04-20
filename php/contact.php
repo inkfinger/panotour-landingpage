@@ -4,8 +4,8 @@ require( 'class.phpmailer.php' );
 require( 'class.smtp.php' );
 
 
-$receiverMail = 'sports@berlinproof.de';
-$receiverName = 'Berlinproof';
+$receiverMail = 'daniel.benecke@sternzeit.de';
+$receiverName = 'nexpics';
 $logFile = __DIR__.'/contact.log';
 $delay = 0;
 
@@ -112,74 +112,11 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
           ? ''
           : $_REQUEST[ 'web' ];
 
-    // rueckruf
-    $rueckruf = empty( $_REQUEST[ 'rueckruf' ] )
+    // message
+    $message = empty( $_REQUEST[ 'message' ] )
           ? ''
-          : $_REQUEST[ 'rueckruf' ];
+          : $_REQUEST[ 'message' ];
 
-    // wunschtermin
-    $wunschtermin = empty( $_REQUEST[ 'wunschtermin' ] )
-          ? ''
-          : $_REQUEST[ 'wunschtermin' ];
-
-    // wunschtermin
-    $bestellen = empty( $_REQUEST[ 'bestellen' ] )
-          ? ''
-          : $_REQUEST[ 'bestellen' ];
-
-    // angebot
-    $angebot = empty( $_REQUEST[ 'angebot' ] )
-          ? ''
-          : $_REQUEST[ 'angebot' ];
-
-    // rueckDate
-    $rueckDate = empty( $_REQUEST[ 'rueckDate' ] )
-          ? ''
-          : $_REQUEST[ 'rueckDate' ];
-
-    // rueckZeit
-    $rueckZeit = empty( $_REQUEST[ 'rueckZeit' ] )
-          ? ''
-          : $_REQUEST[ 'rueckZeit' ];
-
-    // terminDate
-    $terminDate = empty( $_REQUEST[ 'terminDate' ] )
-          ? ''
-          : $_REQUEST[ 'terminDate' ];
-
-    // terminZeit
-    $terminZeit = empty( $_REQUEST[ 'terminZeit' ] )
-          ? ''
-          : $_REQUEST[ 'terminZeit' ];
-
-    date_default_timezone_set("Europe/Berlin");
-    $timestamp = time();
-    $datum = date("d.m.Y",$timestamp);
-    $uhrzeit = date("H:i",$timestamp);
-
-    $wantTermin = "";
-
-    if( $wunschtermin ) {
-      $wantTermin = "Der Wunschtermin des Kunden ist am $terminDate gegen $terminZeit." ;
-    } else {
-      $wantTermin =  "Der Kunde hat keinen Wunschtermin.";
-    }
-
-    $wantRueck = "";
-
-    if( $rueckruf ) {
-      $wantRueck = "Der Kunde möchte zum $rueckDate gegen $rueckZeit zurückgerufen werden. ";
-    } else {
-      $wantRueck = "Der Kunde möchte nicht zurückgerufen werden.";
-    }
-
-    $wantAngebot = "";
-
-    if( $wantAngebot ) {
-      $wantAngebot = "Der Kunde wünscht ein Angebot.";
-    } else {
-      $wantAngebot = "Der Kunde wünscht kein Angebot.";
-    }
 
     if( hasLog( $log ) ) {
 
@@ -202,7 +139,7 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
     $mail->CharSet = 'utf-8';
 
     $mail->From     = "trusted@berlinproof.de";
-    $mail->FromName = "Berlinproof GmbH";
+    $mail->FromName = "nexpics GmbH";
     $mail->AddAddress( $receiverMail, $receiverName );
     $mail->AddReplyTo( $email, ( $vorname . " " . $nachname ) );
 
@@ -224,8 +161,7 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
     Mail: $email
     Web: $web
 
-    Rückruf: $wantRueck
-    Wunschtermin: $wantTermin
+    Nachricht: $message
 
     ---
     Die Anfrage wurde am $datum um $uhrzeit erstellt.";
@@ -244,10 +180,10 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
     $mail->Port = 587;
     $mail->CharSet = 'utf-8';
 
-    $mail->From     = "trusted@berlinproof.de";
-    $mail->FromName = "Berlinproof GmbH";
+    $mail->From     = "trusted@nexpics.com";
+    $mail->FromName = "nexpics GmbH";
     $mail->AddAddress( $email, $vorname . " " . $nachname );
-    $mail->AddReplyTo( "info@berlinproof.com", ( $receiverName ) );
+    $mail->AddReplyTo( "info@nexpics.com", ( $receiverName ) );
 
 
     $mail->WordWrap = 100;
