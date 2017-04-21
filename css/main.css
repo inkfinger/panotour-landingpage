@@ -2446,6 +2446,15 @@ table th, td, tr {
 .pricing-box h4 {
   padding: 0 2rem;
 }
+.pricing-box h4 small {
+  border-top: 1px solid rgba(0, 0, 0, 0.77);
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
 .pricing-box h4:last-of-type {
   /*border-bottom: 2px solid #333;*/
   margin-bottom: 2rem;
@@ -2471,6 +2480,33 @@ table th, td, tr {
 }
 .pricing-box dt:last-of-type, .pricing-box dd:last-of-type {
   /*border-bottom: 0;*/
+}
+
+.product-details {
+  margin-top: 0;
+}
+.product-details dt {
+  display: block;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.product-details dd {
+  display: list-item;
+  list-style: disc outside;
+  padding-left: 0rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+.product-details dd::before {
+  /*content: '–';*/
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .col .col .product-details {
+    margin-top: 4rem;
+  }
 }
 
 html {
