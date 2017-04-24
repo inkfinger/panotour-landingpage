@@ -189,16 +189,25 @@
 		<div class="content" id="section-shooting">
 			<div class="container">
 				<div class="row">
-					<div class="row">
-						<div class="col s12 m6 l6 offset-m3 offset-l3">
-							<span class="bigFont centered">nexpics 360°-Shooting</span>
-						</div>
+					<div class="col s12 m6 l6 offset-m3 offset-l3">
+						<span class="bigFont centered">nexpics 360°-Shooting</span>
+					</div>
+				</div>
+
+				<!-- <div class="row">
+					<div class="col s12 m12 l10 offset-l1">
+						<img src="img/360-tour.png" />
+					</div>
+				</div> -->
+				<div class="row">
+					<div class="col s12 m12 l10 offset-l1">
+						<img src="img/360-tour.png" />
 					</div>
 				</div>
 
 				<div class="row">
 
-					<div class="col s12 m6 l8">
+					<div class="col s12 m6 l8 double-col">
 						<div class="col s12 m12 l6">
 							<div class="well">
 								<ul class="feature-list">
@@ -241,6 +250,7 @@
 							<a href="/#TerminVereinbaren" class="button btn red">Unverbindlich anfragen</a>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -253,11 +263,17 @@
 				</div>
 				<div class="row">
 					<div class="col s12 m12 l10 offset-l1">
-						<img src="img/browser-titanic-hotel.png" />
+						<div class="video-holder video-imac">
+							<img class="video-overlay" src="img/imac_transparent.png" />
+							<video playsinline muted loop poster="img/posterimage-imac-360tour.png" class="js-play-video" id="bgvid">
+						    <source src="video/seevilla_tour.webm" type="video/webm">
+						    <source src="video/seevilla_tour.mp4" type="video/mp4">
+							</video>
+						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col s12 m6 l8">
+					<div class="col s12 m6 l8 double-col">
 						<div class="col s12 m12 l6">
 							<div class="well">
 								<ul class="feature-list">
@@ -280,7 +296,7 @@
 								<dd>Erstellung der 360°-Tour</dd>
 								<dd>Erweiterung der 360°-Tour um ein Na&shy;vi&shy;ga&shy;tions&shy;element sowie Buttons zur Direkt-Verlinkung auf Ihre Web&shy;site und zur Buchungs&shy;strecke</dd>
 								<dd>Integration der 360°-Tour in Ihren bergfex Jahres&shy;eintrag</dd>
-								<dd>* Panorama Tour und Integration ist nur nach einem Panorama Shooting möglich</dd>
+								<dd>* Panorama Tour und Integration ist nur nach einem <a href="/#section-shooting">Panorama Shooting</a> möglich</dd>
 							</dl>
 						</div>
 					</div>
@@ -319,7 +335,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col s12 m6 l8">
+					<div class="col s12 m6 l8 double-col">
 						<div class="col s12 m12 l6">
 							<div class="well">
 								<ul class="feature-list">
@@ -460,15 +476,16 @@
 							</div>
 
 							<hr>
-							<input type="radio" name="cols" class="col-1" /><br />
-							<input type="radio" name="cols" class="col-2" /><br />
+							<input type="radio" name="cols" class="col-1" />
+							<input type="radio" name="cols" class="col-2" />
 							<input type="radio" name="cols" class="col-3" />
 							<div class="row">
-								<div class="col s12 m6">
-									IHRE NACHRICHT:<br/>
-									<small>[OPTIONAL]</small>
+								<div class="col s12 m12">
+									<span class="input-label">Ihre Nachricht <small>[Optional]</small>:</span>
 								</div>
-								<div class="col s12 m6">
+							</div>
+							<div class="row">
+								<div class="col s12 m12">
       						<textarea name="message" class="filled-in" id="message"></textarea>
 								</div>
 							</div>
@@ -493,7 +510,7 @@
 
 						<p>
 							Gerne können Sie uns auch persönlich kontaktieren. Unsere Berater helfen Ihnen gerne.<br>
-							<a class="btn-flat telBtn" href="tel:03077008650"><i class="material-icons left">phone</i>030 / 77 00 86 50</a>
+							<a class="btn-flat telBtn" href="tel:+493077008650"><i class="material-icons">phone</i> 030 / 77 00 86 50</a>
 						</p>
 					</div>
 				</div>
@@ -534,7 +551,7 @@
 					<ul>
 						<li>Wallstraße 15</li>
 						<li>10179 Berlin</li>
-						<li>T. <span class="hover">030 / 77 00 86 50</span></li>
+						<li>T. <span class="hover">+49 30 77 00 86 50</span></li>
 						<li>E. <a target="_blank" href="mailto:info@nexpics.com">info@nexpics.com</a></li>
 						<li><a target="_blank" href="//nexpics.com/imprint">Impressum</a></li>
 					</ul>
@@ -542,7 +559,13 @@
 			</div>
 
 		</div>
-		<div class="row copyright">Copyright by <a href="//www.nexpics.com">nexpics GmbH</a></div>
+		<div class="container">
+			<div class="row links">
+				<div class="col s12 m12">
+					<div class="copyright">Copyright by <a href="//www.nexpics.com">nexpics GmbH</a></div>
+				</div>
+			</div>
+		</div>
 	</footer>
 
 	<!-- Scripts -->
@@ -575,6 +598,21 @@
 	      complete: function() {} // Callback for Modal close
 	    });
 		});
+
+		/* Click to play video */
+		$('.js-play-video').on('click', function() {
+			var $video = $(this).get(0);
+			if ($video.paused === false) {
+        $video.pause();
+				console.log('video paused');
+	    } else {
+        $video.play();
+				console.log('video playing');
+	    }
+	    return false;
+		});
+
+
 	</script>
 	<script>
 	/* Set the width of the side navigation to 250px */

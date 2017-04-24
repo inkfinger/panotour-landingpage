@@ -138,7 +138,7 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
     $mail->Port = 587;
     $mail->CharSet = 'utf-8';
 
-    $mail->From     = "trusted@berlinproof.de";
+    $mail->From     = "info@nexpics.com";
     $mail->FromName = "nexpics GmbH";
     $mail->AddAddress( $receiverMail, $receiverName );
     $mail->AddReplyTo( $email, ( $vorname . " " . $nachname ) );
@@ -180,7 +180,7 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
     $mail->Port = 587;
     $mail->CharSet = 'utf-8';
 
-    $mail->From     = "trusted@nexpics.com";
+    $mail->From     = "info@nexpics.com";
     $mail->FromName = "nexpics GmbH";
     $mail->AddAddress( $email, $vorname . " " . $nachname );
     $mail->AddReplyTo( "info@nexpics.com", ( $receiverName ) );
