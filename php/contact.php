@@ -4,7 +4,7 @@ require( 'class.phpmailer.php' );
 require( 'class.smtp.php' );
 
 
-$receiverMail = 'daniel.benecke@sternzeit.de';
+$receiverMail = 'eva.schneider@sternzeit.de';
 $receiverName = 'nexpics';
 $logFile = __DIR__.'/contact.log';
 $delay = 0;
@@ -117,6 +117,11 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
           ? ''
           : $_REQUEST[ 'message' ];
 
+    // Timestamp in mail
+    date_default_timezone_set("Europe/Berlin");
+    $timestamp = time();
+    $datum = date("d.m.Y",$timestamp);
+    $uhrzeit = date("H:i",$timestamp);
 
     if( hasLog( $log ) ) {
 
@@ -130,26 +135,24 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
     $mail = new PHPMailer();
 
     $mail->IsSMTP();
-    $mail->Host     = "smtp.strato.de";
+    $mail->Host     = "smtp.gmail.com";
     $mail->SMTPAuth = true;
-    $mail->Username = "trusted@berlinproof.de";
-    $mail->Password = "Pk1mnIri!";
+    $mail->Username = "info@nexpics.com";
+    $mail->Password = "mmzovsllkscmotes";
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
     $mail->CharSet = 'utf-8';
 
     $mail->From     = "info@nexpics.com";
     $mail->FromName = "nexpics GmbH";
-    $mail->AddAddress( $receiverMail, $receiverName );
-    $mail->AddReplyTo( $email, ( $vorname . " " . $nachname ) );
+    $mail->AddAddress( $email, $vorname . " " . $nachname );
+    $mail->AddReplyTo( "info@nexpics.com", ( $receiverName ) );
 
 
     $mail->WordWrap = 100;
     $mail->Subject  =  "[ $datum | $uhrzeit ] ANFRAGE Google Street View | Trusted";
-    $mail->Body     =  "Google Street View | Trusted Anfrage
-
-    Folgende Informationen wurden vom Kunden übermittelt:
-
+    $mail->Body     =  "Google Street View | Trusted Anfrage\n\n
+    Folgende Informationen wurden vom Kunden übermittelt:\n\n
     Unternehmen: $unternehmen
     Vorname: $vorname
     Nachname: $nachname
@@ -159,11 +162,9 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
     Telefon: $tel
     Fax: $fax
     Mail: $email
-    Web: $web
-
-    Nachricht: $message
-
-    ---
+    Web: $web\n
+    Nachricht: $message\n
+    –––\n
     Die Anfrage wurde am $datum um $uhrzeit erstellt.";
 
 
@@ -172,10 +173,10 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
     $mail = new PHPMailer();
 
     $mail->IsSMTP();
-    $mail->Host     = "smtp.strato.de";
+    $mail->Host     = "smtp.gmail.com";
     $mail->SMTPAuth = true;
-    $mail->Username = "trusted@berlinproof.de";
-    $mail->Password = "Pk1mnIri!";
+    $mail->Username = "info@nexpics.com";
+    $mail->Password = "mmzovsllkscmotes";
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
     $mail->CharSet = 'utf-8';
@@ -189,12 +190,8 @@ if( strtolower( $_SERVER[ 'REQUEST_METHOD' ] ) == 'post' ) {
     $mail->WordWrap = 100;
     $mail->Subject  =  "[ $datum | $uhrzeit ] ANFRAGE Google Street View | Trusted";
     $mail->Body     =  "Google Street View | Trusted Bestellung
-
-    Sehr geehrte Damen und Herren,
-
-    wir bedanken uns für Ihre Anfrage bezüglich eines Google Street View | Trusted Fotoshootings für Ihr Hotel.
-
-    Einer unserer Vertriebsmitarbeiter wird sich in Kürze bei Ihnen melden.";
+    \n\nSehr geehrte Damen und Herren, \n\nwir bedanken uns für Ihre Anfrage bezüglich eines Google Street View | Trusted Fotoshootings für Ihr Hotel.
+    \nEiner unserer Vertriebsmitarbeiter wird sich in Kürze bei Ihnen melden.";
 
 
     $mail->Send();
