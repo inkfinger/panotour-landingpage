@@ -2481,6 +2481,7 @@ table th, td, tr {
   font-size: 1.6rem;
   margin: 0;
   padding: 1rem 0.5rem;
+  vertical-align: top;
 }
 .pricing-box dt:last-of-type, .pricing-box dd:last-of-type {
   /*border-bottom: 0;*/
@@ -2661,6 +2662,7 @@ video.responsive-video {
 }
 .video-holder video {
   /* Use ratio of recorded footage 16:9 for best result */
+  cursor: pointer;
   height: 61.8%;
   left: 0;
   right: 0;
