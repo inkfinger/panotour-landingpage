@@ -9136,6 +9136,17 @@ header#nav ul.table-of-contents li:hover {
 .content-box .img-window.active img {
   opacity: 0;
 }
+.content-box #closeTour .close-text {
+  display: none;
+}
+.content-box #closeTour.active .close-text {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 300;
+  position: absolute;
+  right: 40px;
+  top: 0.5rem;
+}
 .content-box #closeTour {
   border-radius: 5px;
   position: fixed;
