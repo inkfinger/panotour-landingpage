@@ -2453,11 +2453,11 @@ table th, td, tr {
 }
 .pricing-box h4 small {
   border-top: 1px solid rgba(0, 0, 0, 0.77);
-  display: inline-block;
+  display: block;
   font-size: 1.4rem;
   font-weight: 300;
   margin-top: 1.5rem;
-  padding-top: 2rem;
+  padding-top: 1.7rem;
 }
 .pricing-box h4:last-of-type {
   /*border-bottom: 2px solid #333;*/
@@ -2470,10 +2470,10 @@ table th, td, tr {
 }
 .pricing-box dt {
   text-align: right;
-  width: 55%;
+  width: 50%;
 }
 .pricing-box dd {
-  width: 45%;
+  width: 50%;
 }
 .pricing-box dt, .pricing-box dd {
   display: inline-block;
@@ -5499,6 +5499,8 @@ input[type=range] + .thumb {
   }
 }
 .row.equal-heights {
+  display: table;
+  height: 100%;
   /*display: flex;
   flex-flow: column;
   flex-wrap: wrap;
@@ -5529,8 +5531,7 @@ input[type=range] + .thumb {
   padding: 15px;
 }
 .row.equal-heights .subhead {
-  font-weight: 100;
-  /*height: 3rem;*/
+  /*font-weight: 100;*/
   letter-spacing: 0.045em;
   line-height: 2.2rem;
   text-transform: uppercase;
@@ -6136,7 +6137,7 @@ h3 {
 }
 h4 {
   font-size: 2.8rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 2.508rem;
   margin: 1.14rem 0 0.912rem 0;
 }
@@ -6985,8 +6986,8 @@ a.waves-effect .waves-ripple {
   right: 0;
   background-color: #fafafa;
   padding: 0;
-  height: 80%;
-  width: 80%;
+  /*height: 80%;*/
+  /*width: 80%;*/
   margin: auto;
   overflow-y: auto;
   z-index: 1000;
@@ -6998,10 +6999,34 @@ a.waves-effect .waves-ripple {
   transform: translate(0);
   will-change: top, opacity;
 }
+.modal.modal-banner {
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  width: auto;
+}
+.modal h4 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  margin: 0 0 1rem 0;
+  text-transform: none;
+}
+.modal iframe {
+  border: 1px solid rgba(0, 0, 0, 0.41);
+  display: block;
+  margin: 0 auto;
+}
 @media only screen and (max-width: 992px) {
   .modal {
     width: 80%;
   }
+}
+.modal .modal-header {
+  /*border-radius: 0 0 2px 2px;*/
+  background-color: #fafafa;
+  padding: 0;
+  min-height: 1rem;
+  width: 100%;
 }
 .modal h1,
 .modal h2,
@@ -9217,7 +9242,7 @@ header#nav ul.table-of-contents li:hover {
   border-top: 2px solid #333333;
   border-bottom: 2px solid #333333;
   display: block;
-  font-weight: 200;
+  font-weight: 300;
   text-transform: uppercase;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -9560,7 +9585,6 @@ footer a:hover {
   border-bottom-left-radius:10px;
   border-bottom-right-radius:10px;
   font-size:14px;
-  /*font-weight: 100;*/
   padding:15px;
   text-align:center;
   text-transform: uppercase;
