@@ -2663,13 +2663,13 @@ video.responsive-video {
 .video-holder video {
   /* Use ratio of recorded footage 16:9 for best result */
   cursor: pointer;
-  height: 61.8%;
+  height: 62%;
   left: 0;
   right: 0;
   margin: auto;
   position: absolute;
-  top: 4.85%;
-  width: 93%;
+  top: 3.25%;
+  width: 92%;
   z-index: 5;
 }
 
